@@ -67,7 +67,7 @@ jobs:
         with:
           app-name: 'expresstest-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7346CB0ABEEF4695B10AEF6119726004 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           images: |
             expresstest.azurecr.io/test:latest
 
