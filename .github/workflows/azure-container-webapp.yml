@@ -70,6 +70,10 @@ jobs:
         run: |
           az acr login --name expresstest
           
+      - name: pull image
+        run: |
+          docker pull expresstest.azurecr.io/test:latest
+  
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
@@ -78,5 +82,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           images: 'expresstest.azurecr.io/test:latest'
-
 
