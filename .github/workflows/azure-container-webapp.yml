@@ -77,7 +77,6 @@ jobs:
           app-name: 'web-node-asia'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          images: |
-            expresstest.azurecr.io/test:latest
+          images: 'expresstest.azurecr.io/test:latest'
 
 
