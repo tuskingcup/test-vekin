@@ -63,7 +63,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'TestDeployAppServiceACR'
+          app-name: 'test-deploy-app-service'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           images: 'testdeployappserviceacr.azurecr.io/test:latest'
