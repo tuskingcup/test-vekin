@@ -32,6 +32,10 @@ jobs:
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
+      - name: Azure Container Registry Login
+        run: |
+          az acr login --name expresstest
+
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v3
