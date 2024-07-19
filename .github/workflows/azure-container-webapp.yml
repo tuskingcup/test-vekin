@@ -40,7 +40,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: expresstest/test
+          images: expresstest.azurecr.io/test
           tags: |
             latest
 
